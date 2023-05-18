@@ -106,7 +106,7 @@ MonoBehaviour:
   maxTimer: 7
   bulletTransform: {fileID: 2559397804360312609}
   sizeTimer: 0
-  sizeMaxTimer: 10
+  sizeMaxTimer: 0.01
   playerVida: {fileID: 0}
 --- !u!50 &5296038519376447446
 Rigidbody2D:

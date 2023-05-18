@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 231029713050641599}
   - component: {fileID: 231029713050641584}
   - component: {fileID: 231029713050641585}
+  - component: {fileID: -4088234870497325549}
   - component: {fileID: 231029713050641597}
   - component: {fileID: 231029713050641598}
   m_Layer: 0
@@ -137,6 +138,23 @@ MonoBehaviour:
   moveSpeed: 5
   Bullet: {fileID: 4142013772422214208, guid: eb6d01c84d411b24396da4991f845528, type: 3}
   BulletSpeed: 10
+--- !u!114 &-4088234870497325549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231029713050641586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af826247fb4290c44a793cea040b9a76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  maxTimer: 0
+  _lifeAdd: 0
+  _Life: 0
+  _maxLife: 0
 --- !u!50 &231029713050641597
 Rigidbody2D:
   serializedVersion: 4

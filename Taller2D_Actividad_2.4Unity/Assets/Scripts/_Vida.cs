@@ -25,6 +25,7 @@ public class _Vida : MonoBehaviour
         LifeReduction();
         vida();
     }
+
     private void vida()
     {
         if (_Life >= _maxLife)

@@ -14,8 +14,8 @@ public class E2Bullet : MonoBehaviour
     public float maxTimer;
 
     public Transform bulletTransform;
-    float x;
-    float y;
+    float x = 1;
+    float y = 1;
     public float sizeTimer;
     public float sizeMaxTimer;
 
@@ -24,7 +24,8 @@ public class E2Bullet : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        playerVida = GetComponent<_Vida>();
+        playerVida = GameObject.FindWithTag("Player").GetComponent<_Vida>();
+        //bullet no crece
     }
 
     void Update()
@@ -63,8 +64,8 @@ public class E2Bullet : MonoBehaviour
 
         if (sizeTimer >= sizeMaxTimer)
         {
-            x = x * 1.05f;
-            y = y * 1.05f;
+            x = x * 3.5f;
+            y = y * 3.5f;
             e2Bullet.transform.localScale = new Vector3 (x,y,1);
         }
     }
