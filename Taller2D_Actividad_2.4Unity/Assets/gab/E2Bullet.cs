@@ -7,10 +7,19 @@ public class E2Bullet : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D rb;
-    public Transform enemyTransform;
+    private GameObject e2Bullet;
+    
     public Vector2 direccion;
     public float timer;
     public float maxTimer;
+
+    public Transform bulletTransform;
+    float x;
+    float y;
+    public float sizeTimer;
+    public float sizeMaxTimer;
+
+    private Vector2 scaleChange;
 
     public _Vida playerVida;
 
@@ -18,6 +27,7 @@ public class E2Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerVida = GetComponent<_Vida>();
+        scaleChange = new Vector2(0.01f, 0.01f);
     }
 
     void Update()
@@ -45,13 +55,23 @@ public class E2Bullet : MonoBehaviour
 
         if (timer >= maxTimer)
         {
-
-
+            ChangeSize();
             Destroy(gameObject);
         }
     }
 
-    
+    void ChangeSize()
+    {
+        sizeTimer += Time.deltaTime;
+
+        if (sizeTimer >= sizeMaxTimer)
+        {
+            x = x * 1.05f;
+            y = y * 1.05f;
+            e2Bullet.transform.localScale = new Vector3 (x,y,1);
+        }
+    }
+
 }
 
 
