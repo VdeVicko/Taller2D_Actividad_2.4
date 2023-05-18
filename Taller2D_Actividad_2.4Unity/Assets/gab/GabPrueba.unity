@@ -237,8 +237,8 @@ MonoBehaviour:
   timer: 0
   maxTimer: 0
   _lifeAdd: 0
-  _Life: 0
-  _maxLife: 0
+  _Life: 788789
+  _maxLife: 2147483647
 --- !u!1001 &471224983771676018
 PrefabInstance:
   m_ObjectHideFlags: 0

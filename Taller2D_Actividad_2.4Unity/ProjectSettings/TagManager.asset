@@ -3,16 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - trampa
-  - Limite
-  - Piso
-  - Bullet
-=======
-  - Coin
-  - Chip
->>>>>>> 26aed188c57e154823f5c3ee562265ec145ee298
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -20,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 'Techo '
-  - Trampa1
+  - 
+  - 
   - 
   - 
   - 

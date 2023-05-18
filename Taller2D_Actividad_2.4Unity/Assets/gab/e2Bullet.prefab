@@ -103,7 +103,10 @@ MonoBehaviour:
   rb: {fileID: 5296038519376447446}
   direccion: {x: 0, y: 0}
   timer: 0
-  maxTimer: 0
+  maxTimer: 7
+  bulletTransform: {fileID: 2559397804360312609}
+  sizeTimer: 0
+  sizeMaxTimer: 10
   playerVida: {fileID: 0}
 --- !u!50 &5296038519376447446
 Rigidbody2D:

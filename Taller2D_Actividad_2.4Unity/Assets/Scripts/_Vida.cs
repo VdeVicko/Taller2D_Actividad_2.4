@@ -14,6 +14,12 @@ public class _Vida : MonoBehaviour
     [SerializeField] public int _Life;
     [SerializeField] private int _maxLife;
 
+    private void Awake()
+    {
+        _Life = 5;
+        _maxLife = 5;
+    }
+
     void Update()
     {
         LifeReduction();

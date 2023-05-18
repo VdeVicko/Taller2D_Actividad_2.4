@@ -19,15 +19,12 @@ public class E2Bullet : MonoBehaviour
     public float sizeTimer;
     public float sizeMaxTimer;
 
-    private Vector2 scaleChange;
-
     public _Vida playerVida;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         playerVida = GetComponent<_Vida>();
-        scaleChange = new Vector2(0.01f, 0.01f);
     }
 
     void Update()
