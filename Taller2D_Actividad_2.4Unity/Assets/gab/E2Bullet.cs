@@ -7,6 +7,7 @@ public class E2Bullet : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D rb;
+    public Transform enemyTransform;
     public Vector2 direccion;
     public float timer;
     public float maxTimer;
@@ -44,7 +45,13 @@ public class E2Bullet : MonoBehaviour
 
         if (timer >= maxTimer)
         {
+
+
             Destroy(gameObject);
         }
     }
+
+    
 }
+
+
