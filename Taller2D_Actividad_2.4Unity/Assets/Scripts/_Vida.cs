@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class _Vida : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class _Vida : MonoBehaviour
 
     [Header("Life Variables")]
     [SerializeField] private int _lifeAdd;
-    [SerializeField] private int _Life;
+    [SerializeField] public int _Life;
     [SerializeField] private int _maxLife;
 
     void Update()
@@ -26,7 +27,7 @@ public class _Vida : MonoBehaviour
         }
         if(_Life <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
         }
     }
 
