@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Bullet
   - Chip
+  - trampa
+  - Coin
+  - CamTrigger
   layers:
   - Default
   - TransparentFX
