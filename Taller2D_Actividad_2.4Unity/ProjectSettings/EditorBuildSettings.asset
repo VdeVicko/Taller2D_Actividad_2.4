@@ -5,22 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/gab/GabPrueba.unity
+    guid: 99667984436880e479b1a478c0de8f5d
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Inicio.unity
-    guid: 11171a90fe47a8048a89b73ee0131471
+    path: Assets/Scenes/Creditos.unity
+    guid: b8ebccac3cc0d9645b15b7eab722ee04
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 1c5083ca40ad83c4a916a558b193f69a
   - enabled: 1
-    path: Assets/Scenes/Win.unity
-    guid: eaf5e456db59b5d409b6adb5f1eea8d3
+    path: Assets/Scenes/Inicio.unity
+    guid: 11171a90fe47a8048a89b73ee0131471
   - enabled: 1
     path: Assets/Scenes/Nivel1.unity
     guid: e05e855695a2cd04c9b5f99d19a7e4f1
   - enabled: 1
-    path: Assets/Scenes/Creditos.unity
-    guid: b8ebccac3cc0d9645b15b7eab722ee04
+    path: Assets/Scenes/Win.unity
+    guid: eaf5e456db59b5d409b6adb5f1eea8d3
+  - enabled: 1
+    path: Assets/Scenes/Nivel2.unity
+    guid: 404a053c9625f16468f669f387899809
   m_configObjects: {}

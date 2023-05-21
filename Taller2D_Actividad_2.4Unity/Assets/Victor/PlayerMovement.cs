@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -58,5 +59,20 @@ public class PlayerMovement : MonoBehaviour
         GameObject bullet = Instantiate(Bullet, FirePoint.position, Quaternion.identity);
         Rigidbody2D rigidb = bullet.GetComponent<Rigidbody2D>();
         rigidb.AddForce(FirePoint.up * BulletSpeed * 10f, ForceMode2D.Force);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("CamTrigger"))
+        {
+            CameraManager.GetInstance().SwitchToCamera2();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("CamTrigger"))
+        {
+            CameraManager.GetInstance().SwitchToCamera1();
+        }
     }
 }

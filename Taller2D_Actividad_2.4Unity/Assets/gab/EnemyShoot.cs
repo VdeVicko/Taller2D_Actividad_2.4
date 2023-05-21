@@ -35,7 +35,7 @@ public class EnemyShoot : MonoBehaviour
                 GameObject obj = Instantiate(e2Bullet);
                 obj.transform.position = transform.position;
 
-                //obj.GetComponent<E2Bullet>().direction = direccion.normalized;
+                obj.GetComponent<E2Bullet>().direccion = direccion.normalized;
 
                 timer = 0;
             }

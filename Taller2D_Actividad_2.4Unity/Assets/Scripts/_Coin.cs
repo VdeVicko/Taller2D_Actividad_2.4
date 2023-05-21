@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class _Coin : MonoBehaviour
 {
+    public CoinsText coinsText;
+
     [Header("Time Variables")]
     [SerializeField] private float timer;
     [SerializeField] private float maxTimer;
@@ -12,9 +14,15 @@ public class _Coin : MonoBehaviour
     [SerializeField] private int _pointAdd;
     [SerializeField] private int _points;
 
+    private void Awake()
+    {
+        coinsText = GameObject.Find("CoinTMP").GetComponent<CoinsText>();
+        coinsText.ChangeCoinText(_points);
+    }
     void Update()
     {
         PointReduction();
+        coinsText.ChangeCoinText(_points);
     }
     private void PointReduction()
     {
@@ -38,6 +46,7 @@ public class _Coin : MonoBehaviour
             {
                 _points += _pointAdd;
                 Destroy(collision.gameObject);
+                coinsText.ChangeCoinText(_points);
             }
 
         }

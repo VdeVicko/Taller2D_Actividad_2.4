@@ -8,9 +8,11 @@ public class BalaTrampa2 : MonoBehaviour
     public Rigidbody2D rb2d;
     public Vector2 direction;
     public float timer, maxTimer;
+    public _Vida _vida;
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        _vida = GameObject.FindWithTag("Player").GetComponent<_Vida>();
     }
 
     void Update()
@@ -34,6 +36,7 @@ public class BalaTrampa2 : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
+            _vida._Life -= 1;
         }
 
     }

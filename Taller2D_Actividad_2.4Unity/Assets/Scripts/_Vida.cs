@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class _Vida : MonoBehaviour
 {
+    public VidaText vidaText;
+
     [Header("Time Variables")]
     [SerializeField] private float timer;
     [SerializeField] private float maxTimer;
@@ -14,18 +16,30 @@ public class _Vida : MonoBehaviour
     [SerializeField] public int _Life;
     [SerializeField] private int _maxLife;
 
+
+    private void Awake()
+    {
+        _Life = 5;
+        _maxLife = 5;
+        vidaText = GameObject.Find("VidaTMP").GetComponent<VidaText>();
+        vidaText.ChangeVidaText(_Life);
+    }
+
     void Update()
     {
         LifeReduction();
         vida();
     }
+
     private void vida()
     {
         if (_Life >= _maxLife)
         {
             _Life = _maxLife;
+
         }
-        if(_Life <= 0)
+            vidaText.ChangeVidaText(_Life);
+        if (_Life <= 0)
         {
             SceneManager.LoadScene("GameOver");
         }
@@ -53,6 +67,8 @@ public class _Vida : MonoBehaviour
             {
                 _Life += _lifeAdd;
                 Destroy(collision.gameObject);
+                vidaText.ChangeVidaText(_Life);
+
             }
         }
     }
