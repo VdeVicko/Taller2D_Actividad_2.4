@@ -22,6 +22,10 @@ public class Trampa2 : MonoBehaviour
             Shoot();
             
         }
+        if(maxTimer <= 0)
+        {
+            maxTimer = 1;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
