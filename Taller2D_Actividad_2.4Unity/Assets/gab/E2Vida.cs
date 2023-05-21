@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class E2Vida : MonoBehaviour
 {
+    public _Coin _coin;
     public GameObject Enemy;
     public int HP = 2;
 
-    void Start()
+    void Awake()
     {
-        
+        _coin = GameObject.FindWithTag("Player").GetComponent<_Coin>();
     }
 
     
@@ -19,6 +20,8 @@ public class E2Vida : MonoBehaviour
 
         if (HP <= 0)
         {
+            _coin.count++;
+            _coin._points+=10;
             Destroy(gameObject);
         }
     }

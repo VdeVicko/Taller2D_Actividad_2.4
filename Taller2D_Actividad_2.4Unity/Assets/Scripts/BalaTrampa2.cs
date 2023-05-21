@@ -9,10 +9,12 @@ public class BalaTrampa2 : MonoBehaviour
     public Vector2 direction;
     public float timer, maxTimer;
     public _Vida _vida;
+    public _Coin _coin;
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         _vida = GameObject.FindWithTag("Player").GetComponent<_Vida>();
+        _coin = GameObject.FindWithTag("Player").GetComponent<_Coin>();
     }
 
     void Update()
@@ -37,6 +39,7 @@ public class BalaTrampa2 : MonoBehaviour
         {
             Destroy(gameObject);
             _vida._Life -= 1;
+            _coin._points -= 5;
         }
 
     }

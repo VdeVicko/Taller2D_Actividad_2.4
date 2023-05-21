@@ -20,11 +20,13 @@ public class E2Bullet : MonoBehaviour
     public float sizeMaxTimer;
 
     public _Vida playerVida;
+    public _Coin _coin;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         playerVida = GameObject.FindWithTag("Player").GetComponent<_Vida>();
+        _coin = GameObject.FindWithTag("Player").GetComponent<_Coin>();
         //bullet no crece
     }
 
@@ -44,6 +46,7 @@ public class E2Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             playerVida._Life -= 1;
+            _coin._points -= 5;
         }
     }
 

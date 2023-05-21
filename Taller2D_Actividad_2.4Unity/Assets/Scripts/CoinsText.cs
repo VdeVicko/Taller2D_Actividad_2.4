@@ -12,6 +12,6 @@ public class CoinsText : MonoBehaviour
 
     public void ChangeCoinText(int monedas)
     {
-        coinsText.text = "Coins: " + monedas;
+        coinsText.text = "Puntaje: " + monedas;
     }
 }

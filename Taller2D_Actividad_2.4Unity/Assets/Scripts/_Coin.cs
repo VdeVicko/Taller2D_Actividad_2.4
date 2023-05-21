@@ -5,6 +5,8 @@ using UnityEngine;
 public class _Coin : MonoBehaviour
 {
     public CoinsText coinsText;
+    public EnemigosDerrotadosText enemigosText;
+    public int count;
 
     [Header("Time Variables")]
     [SerializeField] private float timer;
@@ -12,17 +14,24 @@ public class _Coin : MonoBehaviour
 
     [Header("Points Variables")]
     [SerializeField] private int _pointAdd;
-    [SerializeField] private int _points;
+    [SerializeField] public int _points;
 
     private void Awake()
     {
         coinsText = GameObject.Find("CoinTMP").GetComponent<CoinsText>();
         coinsText.ChangeCoinText(_points);
+        enemigosText = GameObject.Find("EnemigosDerrotadosTMP").GetComponent<EnemigosDerrotadosText>();
+        enemigosText.ChangeEnemigosText(count);
     }
     void Update()
     {
+        if(_points <= 0)
+        {
+            _points = 0;
+        }
         PointReduction();
         coinsText.ChangeCoinText(_points);
+        enemigosText.ChangeEnemigosText(count);
     }
     private void PointReduction()
     {

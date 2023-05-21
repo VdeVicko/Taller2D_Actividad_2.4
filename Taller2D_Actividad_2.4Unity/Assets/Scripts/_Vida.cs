@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class _Vida : MonoBehaviour
 {
     public VidaText vidaText;
+    public _Coin _coin;
 
     [Header("Time Variables")]
     [SerializeField] private float timer;
@@ -23,6 +24,7 @@ public class _Vida : MonoBehaviour
         _maxLife = 5;
         vidaText = GameObject.Find("VidaTMP").GetComponent<VidaText>();
         vidaText.ChangeVidaText(_Life);
+        _coin = GameObject.FindWithTag("Player").GetComponent<_Coin>();
     }
 
     void Update()
@@ -43,6 +45,7 @@ public class _Vida : MonoBehaviour
         {
             SceneManager.LoadScene("GameOver");
         }
+        
     }
 
     private void LifeReduction()
@@ -68,7 +71,9 @@ public class _Vida : MonoBehaviour
                 _Life += _lifeAdd;
                 Destroy(collision.gameObject);
                 vidaText.ChangeVidaText(_Life);
-
+                
+                    _coin._points -= 5;
+                
             }
         }
     }
